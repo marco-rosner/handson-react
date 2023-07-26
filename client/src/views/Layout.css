@@ -1,0 +1,9 @@
+.nav-list {
+    display: flex;
+    flex-direction: row;
+    padding-left: 20px;
+}
+
+.li-margin {
+    margin-left: 50px
+}
