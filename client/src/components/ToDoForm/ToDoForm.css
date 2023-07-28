@@ -1,0 +1,24 @@
+.ToDoForm {
+    display: flex;
+    flex-direction: column;
+    width: 550px;
+}
+
+.fieldForm {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+
+.size {
+    width: 300px;
+}
+
+.submitButton {
+    display: flex;
+    justify-content: right;
+}
+
+.button {
+    width: 100px;
+}

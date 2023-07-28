@@ -1,16 +1,19 @@
 import React from 'react';
+import { Route, Routes } from 'react-router-dom';
+
 import './App.css';
-import { RouterComponent } from './RouterComponent';
+import { FormView, HomeView, ListView, AboutView } from './views';
 
-function App() {
-  return (
-    <div className="App">
-      <body className="App-body">
-      <p>Hands on ReactJS</p>
-      <RouterComponent />
-      </body>
-    </div>
-  );
-}
-
-export default App;
+export const App = () => (
+  <div className="App">
+    <body className="App-body">
+      <Routes>
+        <Route path="/" element={<HomeView />}>
+          <Route index element={<FormView />} />
+          <Route path="/about" element={<AboutView />} />
+          <Route path="/list" element={<ListView />} />
+        </Route>
+      </Routes>
+    </body>
+  </div>
+)

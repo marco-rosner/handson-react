@@ -1,0 +1,32 @@
+.title {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    height: 14vmin;
+    pointer-events: none;
+    padding-left: 20px;
+  }
+
+.titleLayout {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 50px;
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.margin {
+    margin-left: 50px
+}
+
+.link {
+    color: #61dafb;
+}

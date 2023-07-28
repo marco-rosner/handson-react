@@ -4,6 +4,11 @@ On client side, this is a project to practices ReactJS using ReactRouter, Hooks,
 
 On server side, the goal is to apply ServerSide Rendering (SSR) using Express - In progress
 
+## Print
+
+Client -> HomeView 
+![Home View](./client/handon-react.png?raw=true "Home View")
+
 ## Available Scripts
 
 In the project directory, you can run:

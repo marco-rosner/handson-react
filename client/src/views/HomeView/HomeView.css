@@ -1,0 +1,12 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    flex-basis: content;
+    width: 80%;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
