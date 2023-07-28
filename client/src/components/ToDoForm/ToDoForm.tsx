@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
-import { useStoreContext } from '../ContextProvider/ContextProvider';
+import React, { Dispatch, SetStateAction, useState } from 'react'
+import { ToDoInterface, useStoreContext } from '../ContextProvider/ContextProvider';
 import './ToDoForm.css'
 
 type ToDoFormProps = {
-    setToDo: any;
+    setToDo: Dispatch<SetStateAction<ToDoInterface[]>>;
 }
 
 const initialState = { title: '', description: '' }
