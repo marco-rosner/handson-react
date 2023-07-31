@@ -25,11 +25,11 @@ export const ToDoForm = ({ setToDo }: ToDoFormProps) => {
         <div className='ToDoForm'>
             <div className='fieldForm'>
                 <label htmlFor='title'>Title</label>
-                <input name='title' className='size' value={state.title} onChange={(e) => handleChange(e, 'title')} />
+                <input id="title" name='title' aria-label='title' className='size' value={state.title} onChange={(e) => handleChange(e, 'title')} />
             </div>
             <div className='fieldForm'>
                 <label htmlFor='description'>Description</label>
-                <input name='description' className='size' value={state.description} onChange={(e) => handleChange(e, 'description')} />
+                <input id="description" name='description' aria-label='description' className='size' value={state.description} onChange={(e) => handleChange(e, 'description')} />
             </div>
             <div className="submitButton">
                 <button type='button' className='button' onClick={handleSubmit}>Add</button>
