@@ -2,13 +2,14 @@ import React, { useState } from 'react'
 import "./HomeView.css"
 import { Outlet, useLocation } from 'react-router-dom'
 import { ListView } from '../ListView/ListView'
-import { initialValues, StoreContext } from '../../components/ContextProvider/ContextProvider'
+import { initialValues, StoreContext, TitleComponent } from '../../components'
 import { FormView } from '../FormView/FormView'
-import { TitleComponent } from '../../components/TitleComponent/TitleComponent'
+import { useOnlineStatus } from '../../hooks'
 
 export const HomeView = () => {
     const [todos, setToDo] = useState(initialValues)
     const location = useLocation();
+    const isOnline = useOnlineStatus();
 
     return (
         <div className='main'>
@@ -23,6 +24,9 @@ export const HomeView = () => {
                     }
                     <ListView />
                 </StoreContext.Provider>
+            </div>
+            <div className='bottom'>
+                <span>{isOnline ? '✅ Online' : '❌ Disconnected'}</span>
             </div>
         </div>
     )

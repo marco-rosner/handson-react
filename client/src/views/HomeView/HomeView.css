@@ -10,3 +10,7 @@
     flex-direction: row;
     justify-content: space-around;
 }
+
+.bottom {
+    padding-top: 100px;
+}

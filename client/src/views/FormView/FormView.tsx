@@ -1,6 +1,6 @@
 import React, { Dispatch, SetStateAction } from 'react'
 import { ToDoInterface } from '../../components/ContextProvider/ContextProvider';
-import { ToDoForm } from "../../components/ToDoForm/ToDoForm";
+import { ToDoForm } from "../../components";
 import './FormView.css'
 
 type FormViewProps = {

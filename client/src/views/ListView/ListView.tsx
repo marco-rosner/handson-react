@@ -1,6 +1,6 @@
 import React from 'react'
 import './ListView.css'
-import { useStoreContext } from "../../components/ContextProvider/ContextProvider";
+import { useStoreContext } from "../../components";
 import logo from '../../logo.svg'
 
 
