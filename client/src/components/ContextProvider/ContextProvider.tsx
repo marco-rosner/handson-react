@@ -13,8 +13,6 @@ const initialValues: ToDoInterface[] = [{
 const StoreContext = React.createContext(initialValues)
 StoreContext.displayName = 'StoreContext'
 
-
-
 export const useStoreContext = () => useContext(StoreContext);
 
 export { StoreContext, initialValues }

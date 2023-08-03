@@ -1,17 +1,15 @@
 # Hands on ReactJS
 
-On client side, this is a project to practices ReactJS using ReactRouter, Hooks, Context API, Jest (Testing), Typescript based on react create app using typescript template - In progress
+On client side, this is a project to practices ReactJS using ReactRouter, Hooks, Context API, Jest (Testing), Typescript based on react create app using typescript template
 
-On server side, the goal is to apply ServerSide Rendering (SSR) using Express - In progress
+On server side, the goal is to apply ServerSide Rendering (SSR) using Vite and Express
 
 ## Print
 
-Client -> HomeView 
+HomeView 
 ![Home View](./client/handon-react.png?raw=true "Home View")
 
-## Available Scripts
-
-In the project directory, you can run:
+## Client project scripts
 
 ### `yarn start`
 
@@ -33,6 +31,20 @@ Checks the test coverage in the project.
 
 Builds the app for production to the `build` folder.
 
-## Learn More
+## Server project scripts (Server Side Rendering)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### `yarn dev`
+
+Runs the app in the development mode.  
+Open [http://localhost:4000](http://localhost:4000) to view it in the browser.
+
+The page will reload if you make edits.  
+You will also see any lint errors in the console.
+
+### `yarn start`
+
+Runs the app in the production mode. 
+
+### `yarn build`
+
+Builds the app for production to the `dist` folder.
