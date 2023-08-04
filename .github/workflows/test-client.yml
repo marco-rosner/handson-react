@@ -1,0 +1,24 @@
+name: Test Client
+
+run-name: ${{ github.actor }} is testing ${{ github.event.head_commit.message }}
+
+on: push
+
+jobs:
+  Testing:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+            node-version: '18'
+
+      - name: Installing
+        run: cd client && yarn
+          
+        
+      - name: Testing
+        run: cd client && yarn test
+    
