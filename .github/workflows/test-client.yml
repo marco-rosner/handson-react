@@ -1,6 +1,6 @@
 name: Test Client
 
-run-name: ${{ github.actor }} is testing ${{ github.event.head_commit.message }}
+run-name: ${{ github.actor }} is testing > ${{ github.event.head_commit.message }}
 
 on: push
 

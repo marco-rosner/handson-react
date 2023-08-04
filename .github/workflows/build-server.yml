@@ -1,0 +1,27 @@
+name: Build Project (SSR)
+
+run-name: ${{ github.actor }} is building the project
+
+on: push
+
+jobs:
+  Build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+            node-version: '18'
+
+      - name: Installing client deps
+        run: cd client && yarn
+
+      - name: Installing server deps
+        run: cd server && yarn
+          
+        
+      - name: Building
+        run: cd server && yarn build
+    
