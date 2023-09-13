@@ -1,3 +1,5 @@
+[![Test workflow](https://github.com/marco-rosner/handson-react/actions/workflows/test-client.yml/badge.svg)](https://github.com/marco-rosner/handson-react/actions/workflows/test-client.yml)  [![Build workflow](https://github.com/marco-rosner/handson-react/actions/workflows/build-server.yml/badge.svg)](https://github.com/marco-rosner/handson-react/actions/workflows/build-server.yml)
+
 # Hands on ReactJS
 
 On client side, this is a project to practices ReactJS using ReactRouter, Hooks, Context API, Jest (Testing), Typescript based on react create app using typescript template
