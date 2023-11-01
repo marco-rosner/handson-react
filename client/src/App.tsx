@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 
+import './i18n';
 import './App.css';
 import { HomeView, ListView, AboutView } from './views';
 
