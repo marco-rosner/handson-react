@@ -5,9 +5,10 @@ import { ListView } from '../ListView/ListView'
 import { initialValues, StoreContext, TitleComponent } from '../../components'
 import { FormView } from '../FormView/FormView'
 import { useOnlineStatus } from '../../hooks'
+import { ToDoInterface } from '../../components/ContextProvider/ContextProvider'
 
 export const HomeView = () => {
-    const [todos, setToDo] = useState(initialValues)
+    const [todos, setToDo] = useState<ToDoInterface[]>(initialValues)
     const location = useLocation();
     const isOnline = useOnlineStatus();
 
@@ -16,10 +17,10 @@ export const HomeView = () => {
             <TitleComponent />
 
             <div className='content'>
-                <StoreContext.Provider value={todos}>
+                <StoreContext.Provider value={{todos, setToDo}}>
                     {
                         location.pathname === '/' ?
-                            <FormView setToDo={setToDo} /> :
+                            <FormView /> :
                             <Outlet />
                     }
                     <ListView />

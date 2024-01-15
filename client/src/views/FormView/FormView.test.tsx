@@ -12,7 +12,7 @@ jest.mock('react-i18next', () => ({
 
 describe("FormView", () => {
     test('renders title component', () => {
-        const { getByText } = render(<FormView setToDo={() => { }} />);
+        const { getByText } = render(<FormView />);
 
         const titleElement = getByText("form.todoApp");
 

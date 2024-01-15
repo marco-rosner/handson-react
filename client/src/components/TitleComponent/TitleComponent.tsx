@@ -11,21 +11,24 @@ export const TitleComponent = () => {
 
     const handleTranslation = () => {
         const language = state === 'en-US' ? 'pt-BR' : 'en-US';
-        
+
         i18n.changeLanguage(language)
         setState(language)
     }
 
     return (
         <div className='title'>
-            <label htmlFor='translation'>Turn the translation on:</label>
+            <div className='translation'>
+                <span>Translation</span>
                 <input id='translation' type='checkbox' onClick={handleTranslation} />
-                <h3>{t('title.welcome')}</h3>
+            </div>
+
+            <h3>{t('title.welcome')}</h3>
             <div className='titleLayout'>
                 <h4>Hands on ReactJS</h4>
-                
+
                 <img src={logo} className='logo' alt="logo" />
-                
+
             </div>
             <nav>
                 <div className='nav-list'>

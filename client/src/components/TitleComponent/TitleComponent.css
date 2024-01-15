@@ -30,3 +30,9 @@
 .link {
     color: #61dafb;
 }
+
+.translation {
+    font-size: medium;
+    display: flex;
+    justify-content: flex-end;
+}

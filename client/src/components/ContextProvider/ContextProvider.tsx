@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { Dispatch, SetStateAction, useContext } from 'react'
 
 export interface ToDoInterface {
     title: string,
@@ -10,8 +10,12 @@ const initialValues: ToDoInterface[] = [{
     description: 'Activity description'
 }]
 
-const StoreContext = React.createContext(initialValues)
-StoreContext.displayName = 'StoreContext'
+interface StoreInterface {
+    todos: ToDoInterface[],
+    setToDo: Dispatch<SetStateAction<ToDoInterface[]>>
+}
+
+const StoreContext = React.createContext<StoreInterface>({ todos: initialValues, setToDo: () => {}})
 
 export const useStoreContext = () => useContext(StoreContext);
 

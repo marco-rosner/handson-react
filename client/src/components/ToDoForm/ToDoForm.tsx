@@ -1,17 +1,14 @@
-import React, { Dispatch, SetStateAction, useState } from 'react'
+import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next';
-import { ToDoInterface, useStoreContext } from '../ContextProvider/ContextProvider';
+import { useStoreContext } from '../ContextProvider/ContextProvider';
 import './ToDoForm.css'
 
-type ToDoFormProps = {
-    setToDo: Dispatch<SetStateAction<ToDoInterface[]>>;
-}
 
 const initialState = { title: '', description: '' }
 
-export const ToDoForm = ({ setToDo }: ToDoFormProps) => {
+export const ToDoForm = () => {
     const [state, setState] = useState(initialState)
-    const posts = useStoreContext();
+    const { todos, setToDo} = useStoreContext();
     const { t } = useTranslation()
 
     const handleChange = (e: any, field: string) => {
@@ -19,7 +16,7 @@ export const ToDoForm = ({ setToDo }: ToDoFormProps) => {
     }
 
     const handleSubmit = () => {
-        setToDo([{ title: state.title, description: state.description }, ...posts])
+        setToDo([{ title: state.title, description: state.description }, ...todos])
         setState(initialState)
     }
 
