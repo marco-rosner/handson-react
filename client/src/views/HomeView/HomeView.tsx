@@ -1,15 +1,15 @@
 import React, { useState } from 'react'
-import "./HomeView.css"
-import { Outlet, useLocation } from 'react-router-dom'
+import { Outlet } from 'react-router-dom'
+
 import { ListView } from '../ListView/ListView'
 import { initialValues, StoreContext, TitleComponent } from '../../components'
-import { FormView } from '../FormView/FormView'
 import { useOnlineStatus } from '../../hooks'
 import { ToDoInterface } from '../../components/ContextProvider/ContextProvider'
 
+import "./HomeView.css"
+
 export const HomeView = () => {
     const [todos, setToDo] = useState<ToDoInterface[]>(initialValues)
-    const location = useLocation();
     const isOnline = useOnlineStatus();
 
     return (
@@ -17,12 +17,8 @@ export const HomeView = () => {
             <TitleComponent />
 
             <div className='content'>
-                <StoreContext.Provider value={{todos, setToDo}}>
-                    {
-                        location.pathname === '/' ?
-                            <FormView /> :
-                            <Outlet />
-                    }
+                <StoreContext.Provider value={{ todos, setToDo }}>
+                    <Outlet />
                     <ListView />
                 </StoreContext.Provider>
             </div>

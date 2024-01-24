@@ -16,6 +16,8 @@
 }
 
 .description {
+    display: flex;
+    align-items: flex-start;
     color: gray;
 
 }
