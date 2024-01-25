@@ -1,15 +1,14 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Outlet } from 'react-router-dom'
 
 import { ListView } from '../ListView/ListView'
-import { initialValues, StoreContext, TitleComponent } from '../../components'
+import { TitleComponent } from '../../components'
 import { useOnlineStatus } from '../../hooks'
-import { ToDoInterface } from '../../components/ContextProvider/ContextProvider'
+import { StoreProvider } from '../../components/StoreProvider/StoreProvider'
 
 import "./HomeView.css"
 
 export const HomeView = () => {
-    const [todos, setToDo] = useState<ToDoInterface[]>(initialValues)
     const isOnline = useOnlineStatus();
 
     return (
@@ -17,10 +16,10 @@ export const HomeView = () => {
             <TitleComponent />
 
             <div className='content'>
-                <StoreContext.Provider value={{ todos, setToDo }}>
+                <StoreProvider>
                     <Outlet />
                     <ListView />
-                </StoreContext.Provider>
+                </StoreProvider>
             </div>
             <div className='bottom'>
                 <span>{isOnline ? '✅ Online' : '❌ Disconnected'}</span>

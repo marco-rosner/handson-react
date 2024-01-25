@@ -1,6 +1,7 @@
 import React, { BaseSyntheticEvent, useState } from 'react'
 import { useTranslation } from 'react-i18next';
-import { useStoreContext } from '../ContextProvider/ContextProvider';
+import { useStoreContext } from '../StoreProvider';
+
 import './ToDoForm.css'
 
 const initialState = { title: '', description: '' }
