@@ -20,8 +20,7 @@ jobs:
 
       - name: Installing server deps
         run: cd server && yarn
-          
-        
+
       - name: Building
         run: cd server && yarn build
     
