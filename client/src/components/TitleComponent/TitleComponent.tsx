@@ -6,8 +6,7 @@ import { useTranslation } from 'react-i18next'
 
 export const TitleComponent = () => {
     const [state, setState] = useState('en-US');
-    const { i18n } = useTranslation()
-    const { t } = useTranslation()
+    const { i18n, t } = useTranslation()
 
     const handleTranslation = () => {
         const language = state === 'en-US' ? 'pt-BR' : 'en-US';
